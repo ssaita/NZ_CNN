@@ -96,15 +96,15 @@ heatmap = make_gradcam_heatmap(img,model,target_layer_name)
 
 # 画像と同サイズにupsampling
 # order=0 でただの拡大 order=1~5 で滑らかに拡大
-gradcam = resize(heatmap,(224,224),order=1,mode="reflect",anti_aliasing=False)
+gradcam = resize(heatmap,(224,224),order=0,mode="reflect",anti_aliasing=False)
 
 # Grad-CAMの結果表示
 fig = plt.figure(figsize=(6,4))
 fig.add_subplot(1,3,1)
 plt.imshow(test_img / 255.)
-plt.imshow(gradcam ,cmap="jet",alpha=0.5)
+plt.imshow(gradcam ,cmap="jet_r",alpha=0.5)
 fig.add_subplot(1,3,2)
 plt.imshow(test_img / 255.)
 fig.add_subplot(1,3,3)
-plt.imshow(heatmap,cmap="jet")
+plt.imshow(heatmap,cmap="jet_r")
 plt.show()

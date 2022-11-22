@@ -4,7 +4,7 @@ import numpy as np
 
 outfile="SuperviseData/FLRs.npz"#保存ファイル名
 max_photo=120
-photo_size=32
+photo_size=64
 x=[]#画像データ
 y=[]#ラベルデータ
 

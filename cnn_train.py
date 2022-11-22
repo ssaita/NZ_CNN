@@ -13,8 +13,8 @@ from IPython.display import Image, display
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 #入力と出力を指定
-im_rows=32
-im_cols=32
+im_rows=64
+im_cols=64
 im_color=3
 in_shape=(im_rows,im_cols,im_color)
 nb_classes=3
